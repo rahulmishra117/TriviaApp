@@ -1,5 +1,7 @@
+// Controller for creating and returning the all data form the db
 const QUES=require('../models/question');
 
+// For creating the data question
 module.exports.create=function(req,res){
     try{
         QUES.create({
@@ -27,6 +29,7 @@ module.exports.create=function(req,res){
     }
 }
 
+// Creating to show the question set
 module.exports.showquestion=function(req,res)
 {
     try{

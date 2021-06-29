@@ -1,3 +1,4 @@
+// Model of the data set.. for creating the question set,date,time,desc,option
 const mongoose=require('mongoose');
 const questionSchema=new mongoose.Schema({
     desc:{

@@ -1,3 +1,4 @@
+// Database connection two my localsystem database
 const mongoose=require('mongoose');
 
 mongoose.connect('mongodb://localhost/trivapp');
