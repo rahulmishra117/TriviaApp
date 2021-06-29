@@ -1,0 +1,188 @@
+<html>
+  <head>
+    <title>TrivaApp</title>
+    <link rel="stylesheet" href="./Css/style.css" />
+  </head>
+  <body>
+    <!-- Just created Two Div -->
+    <div class="Parent-div">
+        <div class="childshow">
+      <div class="child-div-1">
+        <center><h1>TrivaApp</h1></center>
+        <div>
+          <form action="/create-question" method="POST">
+            <h2>What's Your Good Name ??</h2>
+            <center>
+              <input
+                class="input-style"
+                type="text"
+                name="desc"
+                placeholder="Enter the name"
+                required
+              />
+            </center>
+            <br />
+            <hr />
+
+            <h2>What are the colors in the Indian national flag? </h2>
+            <h2>Answer:</h2>
+            <center>
+              <select
+                class="input-style"
+                name="option"
+                placeholder="Enter Answer"
+              >
+                <option> A) White</option>
+                <option>B) Yellow </option>
+                <option>C) Orange</option>
+                <option>D) Green</option>
+              </select>
+            </center>
+            <hr />
+            <br />
+            <h2>
+              Date :
+              <input class="input-style" type="date" name="date" required />
+            </h2>
+            <h2>
+              Time :
+              <input class="input-style" type="time" name="time" required />
+            </h2>
+            <br />
+            <br />
+            <center>
+              <button class="button-style" type="submit">Submit</button>
+            </center>
+            <!-- <button type="submit">
+               NEXT
+            </button> -->
+          </form>
+        </div>
+        
+        <a class="next" onclick="plusSlides(1)">
+        <h2>NEXT</h2>
+        </a>
+      </div>
+      <!--  -->
+      <div class="child-div-1">
+        <center><h1>TrivaApp</h1></center>
+        <div>
+          <form action="/create-question" method="POST">
+            <h2>What's Your Good Name ??</h2>
+            <center>
+              <input
+                class="input-style"
+                type="text"
+                name="desc"
+                placeholder="Enter the name"
+                required
+              />
+            </center>
+            <br />
+            <hr />
+
+            <h2>Who is the best cricketer in the world?</h2>
+            <h2>Answer:</h2>
+            <center>
+              <select
+                class="input-style"
+                name="option"
+                placeholder="Enter Answer"
+              >
+                <option>A) Sachin Tendulkar</option>
+                <option>B) Virat Kolli</option>
+                <option>C) Adam Gilchirst</option>
+                <option>D) Jacques Kallis</option>
+              </select>
+            </center>
+            <hr />
+            <br />
+            <h2>
+              Date :
+              <input class="input-style" type="date" name="date" required />
+            </h2>
+            <h2>
+              Time :
+              <input class="input-style" type="time" name="time" required />
+            </h2>
+            <br />
+            <br />
+            <center>
+              <button class="button-style" type="submit">Submit</button>
+            </center>
+            <!-- <button type="submit">
+               NEXT
+            </button> -->
+          </form>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">
+            <h2>Home</h2></a> 
+    </div>
+     
+    </div>
+      <!--  -->
+      <div class="child-div-2">
+        <center>
+          <h1>Result of Task</h1>
+          <hr />
+        </center>
+        <ul>
+          <% for (let i of question_list){ %>
+          <l1>
+            <center>
+              <div class="answer-child">
+                <center>
+                  <h3>Name:- <%= i.desc %></h3>
+                  <h5>Your Option:- <%=i.option %></h5>
+                  <h5>Date:- <%=i.date%></h5>
+                  <h5>Time:- <%= i.time %></h5>
+                </center>
+                
+              </div>
+            </center>
+          </l1>
+          <%}%>
+        </ul>
+      </div>
+    </div>
+
+    <!--Including JavaScript for sliding  -->
+    <script>
+// 
+
+
+
+// 
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("child-div-1");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+</html>

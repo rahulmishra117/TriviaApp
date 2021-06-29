@@ -1,0 +1,49 @@
+body{
+    background-color: aliceblue;
+}
+.Parent-div{
+    display: flex;
+}
+.child-div-1 h1{
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: rgb(67, 67, 138);
+}
+.child-div-1{
+    margin-left: 10%;
+    background: #ffffff;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+}
+.child-div-2{
+    width: 50%;
+    margin-left: 10%;
+    background: #ffffff;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+}
+.child-div-2 h1{
+    font-family: sans-serif;
+    font-weight: 2rem;
+    color: blueviolet;
+}
+.answer-child{
+    width: 40%;
+    background: #6bfaff;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+}
+.answer-child h5{
+    font-style: italic;
+}
+.input-style{
+    width: 70%;
+    height: 5%;
+    border-style:groove;
+}
+.button-style{
+    width: 50%;
+    height: 5%;
+    background-color: coral; 
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: rgb(16, 15, 104);
+  }
